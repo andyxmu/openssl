@@ -63,6 +63,7 @@ int main(int argc, char *argv[])
 
 	if (!(req = PEM_read_X509_REQ(fp, NULL, NULL, NULL)))         
 		int_error("Error reading request in file");     
+
 	fclose(fp);       
 
 	/* verify signature on the request */     
@@ -78,6 +79,7 @@ int main(int argc, char *argv[])
 
 	if (!(CAcert = PEM_read_X509(fp, NULL, NULL, NULL)))         
 		int_error("Error reading CA certificate in file");     
+
 	fclose(fp);       
 
 	/* read in the CA private key */     
@@ -91,6 +93,7 @@ int main(int argc, char *argv[])
 	/* print out the subject name and subject alt name extension */     
 	if (!(name = X509_REQ_get_subject_name(req)))         
 		int_error("Error getting subject name from request");     
+
 	X509_NAME_print(out, name, 0); 
 	fputc('\n', stdout);     
 
