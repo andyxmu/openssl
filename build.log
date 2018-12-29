@@ -1,0 +1,5 @@
+make depend && make _all
+make[1]: Entering directory '/root/ws/openssl/openssl'
+make[1]: Leaving directory '/root/ws/openssl/openssl'
+make[1]: Entering directory '/root/ws/openssl/openssl'
+make[1]: Leaving directory '/root/ws/openssl/openssl'
